@@ -6,7 +6,7 @@ import {GoThreeBars} from 'react-icons/go'
 
 const Header = () => {
 
-    const [ShowMenu,setShowMenu] = useState(true);
+    const [ShowMenu,setShowMenu] = useState(false);
 
     const toggleMenu = () => {
         setShowMenu((ShowMenu)=>!ShowMenu)
