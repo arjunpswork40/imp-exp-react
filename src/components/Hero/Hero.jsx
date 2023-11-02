@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Hero.module.css';
-import HeroImg from '../../assets/hero.png';
+import HeroImg from '../../assets/hero2.png';
 import {RiShoppingBagFill} from 'react-icons/ri';
 import {BsArrowRight} from 'react-icons/bs';
 import {motion} from 'framer-motion'
@@ -13,11 +13,20 @@ const Hero = () => {
             {/* left side */}
 
             <div className={css.h_sides}>
-                <span className={css.text1}>Skin Protection Cream</span>
+                <motion.span 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 1.5 }} 
+                className={css.text1}>Global Trade, Local Expertise</motion.span>
 
                 <div className={css.text2}>
-                    <span>Trendy Collections</span>
-                    <span>Seedily say has suitable disposal and boy. Excercise joy man childeren rejoiced.</span>
+                    <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 1.5 }} 
+                    >Global Link</motion.span>
+                    <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 1.5 }} 
+                    >Connecting businesses worldwide for seamless trade.</motion.span>
                 </div>
             </div>
 
@@ -31,7 +40,11 @@ const Hero = () => {
                 initial={{bottom:"4rem"}}
                 whileInView={{bottom:"0rem"}}
                 transition={transition}
-                className={css.blueCircle}></motion.div>
+                className={css.blueCircle}>
+                     <div className={css.centeredText}>
+                        Trustown
+                    </div>
+                </motion.div>
 
                 {/* hero image animation */}
 
@@ -39,6 +52,11 @@ const Hero = () => {
                 transition={transition}
                 initial={{bottom:"-4rem"}}
                 whileInView={{bottom:"0rem"}}
+                animate={{
+                    scale: [1, 2, 2, 1, 1],
+                    rotate: [0, 0, 0, 0, 0],
+                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                  }}
                 src={HeroImg} alt="" width={600} />
 
                 {/* cart div animation */}
@@ -64,13 +82,25 @@ const Hero = () => {
 
             <div className={css.h_sides}>
                 <div className={css.traffic}>
-                    <span>1.5m</span>
-                    <span>Monthly Traffic</span>
+                    <motion.span
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 1 }} 
+                    >1.5m</motion.span>
+                    <motion.span
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 1 }} 
+                    >Monthly Traffic</motion.span>
                 </div>
 
                 <div className={css.customers}>
-                    <span>100k</span>
-                    <span>happy Customers</span>
+                    <motion.span
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 1 }} 
+                    >100k</motion.span>
+                    <motion.span
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 1 }} 
+                    >happy Customers</motion.span>
                 </div>
             </div>
         </div>

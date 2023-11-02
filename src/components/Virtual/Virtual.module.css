@@ -4,6 +4,9 @@
     padding: 2rem;
     display: flex;
     justify-content: space-around;
+    color: white;
+    position: relative;
+    top: 6rem;
 }
 
 .left{

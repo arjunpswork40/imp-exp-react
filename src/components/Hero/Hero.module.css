@@ -1,7 +1,10 @@
 .container{
-    padding: 0rem 3rem;
+    padding: 3rem 3rem;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+    top: 14rem;
+    position: relative;
+    color: white;
 }
 .wrapper{
     display: flex;
@@ -22,7 +25,20 @@
     position: absolute;
     bottom: 0;
     background: linear-gradient(135.74deg, #0bb5ff 14.09%, #6dd3fe 83.81%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.centeredText {
+    color: #FFFFFF    ; /* Adjust the text color as needed */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    position: absolute;
+    top: 30%; /* Position the text at the vertical center */
+    left: 50%; /* Position the text at the horizontal center */
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-family:cursive ;
+  }
 .cart2{
     position: absolute;
     bottom: 25%;
@@ -30,10 +46,11 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    color: black;
 }
 .cart2>svg{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background: white;
     padding: 10px;
     border-radius: 50%;
@@ -70,7 +87,9 @@
 
 .h_sides{
     display: grid;
-    grid-template-rows : 1fr 1fr;
+    grid-template-columns : 1fr 1fr;
+    position: relative;
+    bottom: 100px;
 }
 .text1{
     text-transform: uppercase;
@@ -78,16 +97,17 @@
     width: min-content;
     display: block;
     font-weight: 600;
+    color: white;
 }
 .text2{
     display: flex;
     flex-direction: column;
     width: min-content;
-    color: black;
+    color: white;
 }
 .text2>:first-child{
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
 }
 .text2>:nth-child(2)
 {
@@ -167,6 +187,20 @@
     .cart2{
         transform: scale(.7);
         right: -2rem;
-        bottom: 0;
+        bottom: 100px;
+    }
+    .container{
+        padding: 0rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .h_sides{
+        display: grid;
+        grid-template-columns : 1fr 1fr;
+    }
+   
+    .container>:first-child{
+        grid-template-columns: none;
+
     }
 }

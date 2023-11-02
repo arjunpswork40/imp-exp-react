@@ -7,7 +7,7 @@ import {GoThreeBars} from 'react-icons/go'
 const Header = () => {
 
     const [ShowMenu,setShowMenu] = useState(false);
-
+    const [scrolled, setScrolled] = useState(false);
     const toggleMenu = () => {
         setShowMenu((ShowMenu)=>!ShowMenu)
     }
@@ -34,25 +34,42 @@ const Header = () => {
         };
       }, []);
     
-
+      useEffect(() => {
+        // Add an event listener to detect scroll
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          // Clean up the event listener
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
     return (
-        <div className={css.container}>
+      
+          <div className={`${css.container} ${scrolled ? css.scrolled : ''}`}>
             <div className={css.logo}>
+              <a href='/' className={css.logoNav}>
                 <img src={Logo} alt=''/>
-                <span>amazon</span>
+                <span className={` ${scrolled ? css.scrolled : ''}`}>amazon</span>
+              </a>
             </div>
             <div className={css.right}>
                 <div className={css.bars} onClick={toggleMenu}>
                     <GoThreeBars/> 
                 </div>
                     <ul className={css.menu} style={{display: ShowMenu? 'inherit' : 'none'}}>
-                        <li>Collections</li>
+                        <li><a href='/search'>Collections</a></li>
                         <li>Brands</li>
                         <li>New</li>
                         <li>Sales</li>
                         <li>ENG</li>
                     </ul>
-                <input type="text" className={css.search} placeholder='Search' />
+                {/* <input type="text" className={css.search} placeholder='Search' /> */}
                 
                 <CgShoppingBag className={css.cart}/>
             </div>
