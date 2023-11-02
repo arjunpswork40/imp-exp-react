@@ -15,7 +15,7 @@ import Antarctica from "../../assets/Antarctica.png"
 import Europe from "../../assets/europe.png"
 import NorthAmerica from "../../assets/North_America.png"
 
-import { SliderProducts } from "../../data/products"
+// import { SliderProducts } from "../../data/products"
 
 const Slider = () => {
     return (
