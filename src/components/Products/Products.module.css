@@ -6,6 +6,10 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    color: white;
+}
+.container h1{
+    color: white;
 }
 .container>:nth-child(1){
     position: absolute;
@@ -17,6 +21,7 @@
     display: grid;
     width: 90%;
     grid-template-columns: 25% auto;
+    color: black;
 }
 .menu{
     list-style: none;
@@ -25,6 +30,7 @@
     gap: 2rem;
     font-weight: 500;
     font-size: 1.3rem;
+    color: white;
 }
 .menu>li:hover{
     color: var(--pink);
@@ -39,8 +45,8 @@
     justify-content: space-between;
 }
 .product{
-    width: 12rem;
-    height: 8rem;
+    width: 13.4rem;
+    height: 10rem;
     background-color: white;
     position: relative;
     overflow: hidden;
@@ -52,12 +58,24 @@
     top: 3rem;
     width: 6rem;
     height: 11rem;
-
+    transform: rotate(-20deg) !important;
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 90%;
+    bottom: -30%;
 }
-
+.shopNow{
+    font-size: 0.5rem !important;
+    border: 1px solid var(--black) !important;
+    width: max-content !important;
+    border-radius: 15px !important;
+    padding: 6px !important;
+}
 @media screen and (max-width: 856px) {
     .container{
         gap: 1rem;
+        top:55px;
     }
     .container>:nth-child(1){
         display: none;
@@ -68,6 +86,15 @@
     }
     .menu{
         flex-direction: row;
+    
+    }.imgpro{
+        transform: rotate(-20deg);
+        position: absolute;
+        right: 0;
+        width: 30%;
+        height: 90%;
+        bottom: -30%;
+     
     }
 }
 
@@ -82,7 +109,15 @@
     .container h1{
         text-align: center;
     }
-
+    .imgpro{
+        transform: rotate(-20deg);
+        position: absolute;
+        right: 0;
+        width: 30%;
+        height: 90%;
+        bottom: -30%;
+     
+    }
 }
 @media screen and (max-width: 390px) {
     .menu{
@@ -95,5 +130,13 @@
     .container h1{
         text-align: center;
     }
-
+    .imgpro{
+        transform: rotate(-20deg);
+        position: absolute;
+        right: 0;
+        width: 30%;
+        height: 90%;
+        bottom: -30%;
+     
+    }
 }

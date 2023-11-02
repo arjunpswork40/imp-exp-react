@@ -37,9 +37,9 @@ const Products = () => {
                                         <span>{product.detail}</span>
                                     </div>
                                     <span>{product.price}</span>
-                                    <div>Show Now</div>
+                                    <div className={css.shopNow}>Show Now</div>
                                 </div>
-                                <img src={product.img} alt="" className="img-p" />
+                                <img src={product.img} alt="" className="imgpro" />
                             </div>
                         ))
                     }

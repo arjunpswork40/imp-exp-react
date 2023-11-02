@@ -1,14 +1,38 @@
 .container {
     padding: 1.5rem;
     display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    background-color: #ffffff;
+    color: rgb(2, 2, 2);
 }
+.scrolled {
+    background-color: #000000d5; /* Change to your desired color */
+    color: white; /* Change text color as needed */
+  }
+.logoNav {
+    display: flex; /* Use flexbox to align children vertically */
+    align-items: center; /* Align children vertically in the center */
+    text-decoration: none; /* Remove underlines from the link text */
+    color: #000000; /* Set the text color as needed */
+  }
+  .logoNav img {
+    vertical-align: middle; /* Align the image vertically in the middle */
+    margin-right: 8px; /* Add spacing between the image and the text */
+  }
 .logo {
     display: flex;
     align-items: center;
     flex:1;
     gap: 1rem;
 }
-.logo>img{
+.logoNav>img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.logo>a{
     width: 2.5rem;
     height: 2.5rem;
 }
@@ -34,7 +58,7 @@
 .search{
     width: 7rem;
     outline: none;
-    height: 30%;
+    height: 100%;
     border: none;
     border-radius: 5px;
     padding:0.5rem
@@ -54,14 +78,17 @@
     .right{
         gap: 1rem;
     }
-
+    .container {
+        padding: 1.5rem;
+        display: flex;
+    }
 }
 @media screen and (max-width: 640px) {
     .right{
         position: absolute;
         right: 2rem;
         z-index: 9999;
-        background: white;
+        background: #57ff31c4;
         color: var(--black);
         border-radius: 5px;
         flex-direction: column;
@@ -78,4 +105,21 @@
     .search{
         display: none;
     }
+    .container {
+        padding: 1.5rem;
+        display: flex;
+        background-color: black;
+        color: white;
+    }
+    .logoNav {
+        display: flex; /* Use flexbox to align children vertically */
+        align-items: center; /* Align children vertically in the center */
+        text-decoration: none; /* Remove underlines from the link text */
+        color: #ffffff; /* Set the text color as needed */
+      }
+      .logoNav img {
+        vertical-align: middle; /* Align the image vertically in the middle */
+        margin-right: 8px; /* Add spacing between the image and the text */
+      }
+      
 }
